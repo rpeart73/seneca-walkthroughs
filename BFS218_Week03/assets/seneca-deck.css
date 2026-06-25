@@ -129,16 +129,18 @@
 
 /* ---- key_terms : interactive flip cards ---- */
 .kt-hint { font-size: .5em; color: var(--muted); margin-bottom: .7em; }
-.kt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.flip { perspective: 1200px; height: 178px; cursor: pointer; }
+/* key-terms grid has a fixed height and spreads cards evenly into it, so it never scrolls.
+   (Reveal forces display:block on the active section, so we size the grid directly, not via flex.) */
+.kt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 476px; grid-auto-rows: 1fr; align-content: stretch; }
+.flip { perspective: 1200px; height: auto; min-height: 120px; cursor: pointer; }
 .flip:focus-visible { outline: 3px solid var(--seneca-red); outline-offset: 3px; border-radius: 10px; }
 .flip .inner { position: relative; width: 100%; height: 100%; transition: transform .5s; transform-style: preserve-3d; }
 .flip.flipped .inner { transform: rotateY(180deg); }
-.flip .face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 10px; padding: 16px; box-sizing: border-box; display: flex; border: 1px solid var(--line); }
+.flip .face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 10px; padding: 22px; box-sizing: border-box; display: flex; border: 1px solid var(--line); }
 .flip .front { background: #fff; border-left: 6px solid var(--seneca-red); align-items: center; }
-.flip .front .term { font-weight: 700; font-size: .82em; color: var(--ink); }
-.flip .back { background: var(--ink); color: #fff; transform: rotateY(180deg); overflow-y: auto; }
-.flip .back .def { font-size: .5em; line-height: 1.42; }
+.flip .front .term { font-weight: 700; font-size: .92em; color: var(--ink); }
+.flip .back { background: var(--ink); color: #fff; transform: rotateY(180deg); flex-direction: column; justify-content: center; overflow-y: auto; }
+.flip .back .def { font-size: .58em; line-height: 1.5; }
 
 /* ---- reminder box ---- */
 .reminder { margin-top: 1em; border: 1.5px solid var(--seneca-red); background: var(--light); border-radius: 8px; padding: .7em 1em; }
