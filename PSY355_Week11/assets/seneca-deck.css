@@ -82,11 +82,12 @@
 .title-slide .term { color: var(--muted); font-size: .58em; margin-top: .8em; }
 
 /* ---- content_pair slide (fixed-height so narration scrolls, never overflows) ---- */
-.cp { display: grid; grid-template-columns: 40% 1fr; gap: 34px; height: 592px; align-items: start; }
+.cp { display: grid; grid-template-columns: 49% 1fr; gap: 28px; height: 592px; align-items: center; }
 .cp .media { display: flex; flex-direction: column; }
-.cp .media img { width: 100%; height: auto; max-height: 430px; object-fit: cover; border-radius: 6px; box-shadow: 0 6px 22px rgba(0,0,0,.16); }
-/* diagrams already have a white background, so blend them into the slide (no card frame) */
-.cp .media img.diagram { max-height: 470px; object-fit: contain; border-radius: 0; box-shadow: none; }
+.cp .media img { width: 100%; height: auto; max-height: 460px; object-fit: cover; border-radius: 6px; box-shadow: 0 6px 22px rgba(0,0,0,.16); }
+/* diagrams already have a white background, so blend them into the slide (no card frame).
+   Wider column + taller cap = the diagram renders larger so its internal labels read clearly. */
+.cp .media img.diagram { max-height: 560px; object-fit: contain; border-radius: 0; box-shadow: none; }
 .cp .media figcaption { font-size: .46em; color: var(--muted); margin-top: .5em; font-style: italic; }
 .cp .media figcaption .credit { display: block; font-style: normal; font-size: .88em; margin-top: .25em; opacity: .85; }
 .cp .body { min-width: 0; display: flex; flex-direction: column; height: 592px; }
@@ -141,6 +142,14 @@
 .flip .front .term { font-weight: 700; font-size: .92em; color: var(--ink); }
 .flip .back { background: var(--ink); color: #fff; transform: rotateY(180deg); flex-direction: column; justify-content: center; overflow-y: auto; }
 .flip .back .def { font-size: .52em; line-height: 1.46; }
+
+/* ---- reading_questions: critical-reading portal (answers save to notes) ---- */
+.reading-q .subtitle { font-size: .5em; color: var(--muted); margin-bottom: .7em; max-width: 88ch; }
+.rq-list { height: 470px; overflow-y: auto; padding-right: 12px; display: flex; flex-direction: column; gap: .8em; }
+.rq-q { font-size: .54em; font-weight: 600; color: var(--ink); margin: 0 0 .4em; display: flex; gap: .55em; align-items: baseline; line-height: 1.35; }
+.rq-n { display: inline-flex; min-width: 1.5em; height: 1.5em; align-items: center; justify-content: center; background: var(--seneca-red); color: #fff; border-radius: 50%; font-size: .78em; font-weight: 700; flex: 0 0 auto; }
+.reading-q textarea.reflect { width: 100%; box-sizing: border-box; font-family: inherit; font-size: .5em; line-height: 1.4; padding: .5em .7em; border: 1px solid var(--line); border-radius: 6px; resize: vertical; color: var(--ink); background: #fff; }
+.reading-q textarea.reflect:focus-visible { outline: 2px solid var(--seneca-red); border-color: var(--seneca-red); }
 
 /* ---- reminder box ---- */
 .reminder { margin-top: 1em; border: 1.5px solid var(--seneca-red); background: var(--light); border-radius: 8px; padding: .7em 1em; }
