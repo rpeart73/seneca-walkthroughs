@@ -16,6 +16,12 @@
   <span>BFS218&nbsp;&nbsp;|&nbsp;&nbsp;Week 3&nbsp;&nbsp;|&nbsp;&nbsp;Weekly Walkthrough</span>
   <span class="deck-count" aria-live="polite"></span>
 </div>
+<nav class="deck-nav" aria-label="Slide navigation">
+  <button class="nav-prev" type="button" aria-label="Previous slide">&#8592;&nbsp;Back</button>
+  <button id="deck-export" class="nav-save" type="button"
+          title="Download your reflections and knowledge-check answers (stays on your device)">Save my notes</button>
+  <button class="nav-next" type="button" aria-label="Next slide">Next&nbsp;&#8594;</button>
+</nav>
 
 <div class="reveal"><div class="slides">
 <section class="title-slide" data-background-color="#ffffff">
@@ -24,6 +30,37 @@
   <hr class="rule">
   <div class="wk">Week 3: Algorithmic Bias and the New Jim Code</div>
   <div class="term">Fall 2026</div>
+</section>
+<section class="closing diagnostic" data-background-color="#ffffff">
+  <h2>What Do You Know?</h2>
+  <div class="subtitle">A quick check before we begin. Answer all seven to see where you are starting from. This is not graded.</div>
+  <div class="diag-wrap"><div class="dq" data-qid="d0">
+        <p class="q">1. In the Gender Shades study, the error rate for darker-skinned women was closest to:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Under 1 percent</button><button type="button" class="opt" data-correct="0" aria-pressed="false">About 7 percent</button><button type="button" class="opt" data-correct="1" aria-pressed="false">About 35 percent</button><button type="button" class="opt" data-correct="0" aria-pressed="false">About 50 percent</button></div>
+      </div><div class="dq" data-qid="d1">
+        <p class="q">2. Intersectional bias means that a system can:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Fail for only one group at a time</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Work well for women and for Black people, yet fail Black women</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Never be measured accurately</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Only be caused by biased programmers</button></div>
+      </div><div class="dq" data-qid="d2">
+        <p class="q">3. Default discrimination, as Ruha Benjamin uses it, requires:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">A deliberately racist designer</button><button type="button" class="opt" data-correct="1" aria-pressed="false">No intent at all; it can operate through proxies</button><button type="button" class="opt" data-correct="0" aria-pressed="false">A broken algorithm</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Explicit use of race as a variable</button></div>
+      </div><div class="dq" data-qid="d3">
+        <p class="q">4. Engineered inequity describes bias that is:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">A temporary malfunction</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Structural, emerging from the social context of design</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Always intentional</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Limited to facial recognition</button></div>
+      </div><div class="dq" data-qid="d4">
+        <p class="q">5. A proxy variable is something like a zip code or a name that:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Has no relationship to race</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Correlates with race without naming it</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Is required by privacy law</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Only matters in hiring</button></div>
+      </div><div class="dq" data-qid="d5">
+        <p class="q">6. In Ewert v Canada (2018), the Supreme Court found that risk assessment tools:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Were fully validated for all groups</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Had not been validated for Indigenous offenders</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Could not be used in court</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Were unbiased by design</button></div>
+      </div><div class="dq" data-qid="d6">
+        <p class="q">7. The phrase the New Jim Code is associated with which scholar:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Joy Buolamwini</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Kimberle Crenshaw</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Ruha Benjamin</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Safiya Noble</button></div>
+      </div></div>
+  <div class="diag-actions">
+    <button type="button" class="diag-go">See my result</button>
+    <div class="diag-result" role="status" aria-live="polite"></div>
+  </div>
+  <script type="application/json" class="diag-bands">[{"min": 0, "max": 2, "label": "Just getting started", "note": "This is new ground, which is exactly what the week is for. Watch for the key terms as they come up."}, {"min": 3, "max": 4, "label": "Building a foundation", "note": "You have a working sense of this. Use the walkthrough to firm up the parts you were unsure of."}, {"min": 5, "max": 7, "label": "Strong start", "note": "You came in with a solid grasp. Push on the nuance and the connections this week."}]</script>
 </section>
 <section data-background-color="#ffffff">
   <div class="cp no-media">
@@ -36,6 +73,9 @@
       </div>
       <div class="think fragment">
         <div class="eyebrow">Think about it</div><p>If a system works perfectly for some people and fails for others, is the failure technical or political?</p>
+        <textarea class="reflect" data-rk="think:the-34-7-question" rows="2"
+          aria-label="Your reflection on this prompt"
+          placeholder="Jot your thinking here. Saved on this device only; collect it later with Save my notes."></textarea>
       </div>
       <div class="concepts"><span class="chip">Intersectional Bias</span><span class="chip">Gender Shades</span><span class="chip">Algorithmic Accountability</span></div>
     </div>
@@ -68,6 +108,9 @@
       </div>
       <div class="think fragment">
         <div class="eyebrow">Think about it</div><p>What does it mean for a technology to treat whiteness as the default? How would you recognize this in systems you use every day?</p>
+        <textarea class="reflect" data-rk="think:default-discrimination" rows="2"
+          aria-label="Your reflection on this prompt"
+          placeholder="Jot your thinking here. Saved on this device only; collect it later with Save my notes."></textarea>
       </div>
       <div class="concepts"><span class="chip">Default Discrimination</span><span class="chip">Proxy Variables</span><span class="chip">Algorithmic Proxies</span><span class="chip">Benjamin</span></div>
     </div>
@@ -158,6 +201,26 @@
         <p>The New Jim Code is not abstract. It produces numbers: 0.8% and 34.7%. It produces legal rulings: Ewert v Canada. It produces consequences in policing, hiring, and health care. The thread from Week 1 to here is the move from theory to evidence.</p>
       </div></div>
 </section>
+<section class="closing quiz" data-background-color="#ffffff">
+  <h2>What You Now Know</h2>
+  <div class="subtitle">A brief check on this week. Pick an answer to see if you are right, and why.</div>
+  <div class="quiz-wrap"><div class="quiz-q" data-qid="q0">
+        <p class="q">A facial analysis system is 93 percent accurate overall but fails darker-skinned women far more often. The lesson is that:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="1">Aggregate accuracy can hide intersectional harm</button><button type="button" class="opt" data-correct="0">93 percent is good enough</button><button type="button" class="opt" data-correct="0">The system has no bias</button><button type="button" class="opt" data-correct="0">Accuracy cannot be measured by subgroup</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">Disaggregating by skin type and gender is exactly how Buolamwini and Gebru exposed the gap that overall accuracy concealed.</div>
+      </div><div class="quiz-q" data-qid="q1">
+        <p class="q">Why is default discrimination called structural rather than individual?</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">Because it is caused by a few individual programmers</button><button type="button" class="opt" data-correct="1">Because it operates without intent, through proxies and defaults</button><button type="button" class="opt" data-correct="0">Because it only happens in government systems</button><button type="button" class="opt" data-correct="0">Because it is against the law</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">It reproduces racial hierarchies without anyone intending it, which is what makes it structural rather than personal.</div>
+      </div><div class="quiz-q" data-qid="q2">
+        <p class="q">Ewert v Canada shows engineered inequity because the tool:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">Was deliberately designed to harm</button><button type="button" class="opt" data-correct="1">Reproduced discriminatory outcomes from colonial data, as designed</button><button type="button" class="opt" data-correct="0">Malfunctioned at random</button><button type="button" class="opt" data-correct="0">Was never actually used</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">The system functioned as designed; the design reflected an unequal society, so it reproduced that inequality at scale and speed.</div>
+      </div></div>
+</section>
 <section class="closing" data-background-color="#ffffff">
   <h2>What to Do Next</h2>
   <div class="numbered"><div class="row fragment">
@@ -191,22 +254,32 @@
 <script src="assets/reveal.js"></script>
 <script src="assets/notes.js"></script>
 <script>
+  const DECK_COURSE = "BFS218", DECK_WEEK = "3";
   const deck = new Reveal({
     width: 1280, height: 720, margin: 0,
-    center: false, hash: true, slideNumber: false,
-    transition: "slide", controlsTutorial: false,
+    center: false, hash: true, slideNumber: false, progress: true,
+    controls: false, transition: "slide", controlsTutorial: false,
     plugins: [ RevealNotes ]
   });
   deck.initialize().then(() => {
     // ?reveal-all shows every fragment at once (useful for review + PDF export)
     if (location.search.includes("reveal-all")) deck.configure({ fragments: false });
     const count = document.querySelector(".deck-count");
+    const prevBtn = document.querySelector(".nav-prev");
+    const nextBtn = document.querySelector(".nav-next");
+    prevBtn.addEventListener("click", () => deck.prev());
+    nextBtn.addEventListener("click", () => deck.next());
     const update = () => {
-      const i = deck.getIndices().h + 1;
-      const total = deck.getTotalSlides();
+      const i = deck.getIndices().h + 1, total = deck.getTotalSlides();
       count.textContent = "Slide " + i + " of " + total;
+      const r = deck.availableRoutes();
+      prevBtn.disabled = !r.left;
+      nextBtn.disabled = !r.right;
     };
-    deck.on("slidechanged", update); update();
+    deck.on("slidechanged", update);
+    deck.on("fragmentshown", update);
+    deck.on("fragmenthidden", update);
+    update();
   });
 
   // interactive flip cards (click + keyboard, accessible)
@@ -219,6 +292,111 @@
     card.addEventListener("keydown", e => {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
     });
+  });
+
+  // ---- private, on-device storage (namespaced per course + week) ----
+  const NS = "swt:" + DECK_COURSE + ":" + DECK_WEEK + ":";
+  const store = {
+    get: k => { try { return localStorage.getItem(NS + k) || ""; } catch (e) { return ""; } },
+    set: (k, v) => { try { localStorage.setItem(NS + k, v); } catch (e) {} }
+  };
+
+  // reflections on the "Think about it" prompts: restore + autosave on this device
+  document.querySelectorAll("textarea.reflect").forEach(t => {
+    t.value = store.get(t.dataset.rk);
+    t.addEventListener("input", () => store.set(t.dataset.rk, t.value));
+    t.addEventListener("keydown", e => e.stopPropagation());  // do not navigate slides while typing
+  });
+
+  // knowledge-check questions: instant feedback + explanation, answer persists
+  document.querySelectorAll(".quiz-q").forEach(q => {
+    const qid = q.dataset.qid, fb = q.querySelector(".feedback");
+    const opts = [...q.querySelectorAll(".opt")];
+    const choose = btn => {
+      const correct = btn.dataset.correct === "1";
+      opts.forEach(o => {
+        o.classList.remove("wrong");
+        if (o.dataset.correct === "1") o.classList.add("is-answer");
+      });
+      btn.classList.add(correct ? "correct" : "wrong");
+      q.classList.add("answered");
+      fb.textContent = correct ? "Correct." : "Not quite. The correct answer is highlighted.";
+      store.set("quiz:" + qid, btn.textContent + " || " + (correct ? "correct" : "incorrect"));
+    };
+    opts.forEach(o => o.addEventListener("click", () => choose(o)));
+    if (store.get("quiz:" + qid)) q.classList.add("answered");  // reveal explanation if seen before
+  });
+
+  // ---- "What do you know?" diagnostic: answers stay hidden, then a score RANGE ----
+  document.querySelectorAll(".diagnostic").forEach(d => {
+    const qs = [...d.querySelectorAll(".dq")];
+    let bands = []; try { bands = JSON.parse(d.querySelector(".diag-bands").textContent); } catch (e) {}
+    const result = d.querySelector(".diag-result");
+    qs.forEach(q => {
+      const opts = [...q.querySelectorAll(".opt")];
+      opts.forEach(o => o.addEventListener("click", () => {
+        opts.forEach(x => { x.classList.remove("chosen"); x.setAttribute("aria-pressed", "false"); });
+        o.classList.add("chosen"); o.setAttribute("aria-pressed", "true");
+      }));
+    });
+    d.querySelector(".diag-go").addEventListener("click", () => {
+      const chosen = qs.map(q => q.querySelector(".opt.chosen"));
+      const n = qs.length, answered = chosen.filter(Boolean).length;
+      if (answered < n) {
+        result.textContent = "Answer all " + n + " questions first (" + answered + " of " + n + " done).";
+        return;
+      }
+      let score = 0;
+      qs.forEach((q, i) => {
+        if (chosen[i].dataset.correct === "1") score++;
+        q.querySelectorAll(".opt").forEach(o => { if (o.dataset.correct === "1") o.classList.add("is-answer"); });
+        if (chosen[i].dataset.correct !== "1") chosen[i].classList.add("wrong");
+      });
+      const b = bands.find(x => score >= x.min && score <= x.max) || {};
+      const range = (b.min === b.max) ? String(b.min) : (b.min + " to " + b.max);
+      result.innerHTML = "<strong>You answered " + score + " of " + n + ".</strong><br>" +
+        "<span class='band'>" + (b.label || "") + " (" + range + " range)</span><br>" + (b.note || "");
+      d.classList.add("revealed");
+      store.set("diag", score + "/" + n + " || " + (b.label || ""));
+    });
+    const prior = store.get("diag");
+    if (prior) result.textContent = "Previous result on this device: " + prior;
+  });
+
+  // keep selecting/typing from also navigating the deck
+  document.querySelectorAll(".opt,.diag-go,.deck-export").forEach(b =>
+    b.addEventListener("keydown", e => { if (e.key === " " || e.key === "Enter") e.stopPropagation(); }));
+
+  // "Save my notes": compile reflections + check answers into a file the student keeps.
+  // Everything stays on the device; nothing is uploaded.
+  const exportBtn = document.getElementById("deck-export");
+  if (exportBtn) exportBtn.addEventListener("click", () => {
+    const lines = ["My Walkthrough Notes", DECK_COURSE + " Week " + DECK_WEEK,
+                   "Generated on your device.", "", "REFLECTIONS", ""];
+    let any = false;
+    document.querySelectorAll("textarea.reflect").forEach(t => {
+      if (t.value.trim()) {
+        any = true;
+        const p = t.closest(".think") ? t.closest(".think").querySelector("p").textContent : "Prompt";
+        lines.push("Prompt: " + p, "You: " + t.value.trim(), "");
+      }
+    });
+    if (!any) lines.push("(No reflections written yet.)", "");
+    lines.push("", "KNOWLEDGE CHECK", "");
+    let anyQ = false;
+    document.querySelectorAll(".quiz-q").forEach(q => {
+      const s = store.get("quiz:" + q.dataset.qid);
+      if (s) { anyQ = true; lines.push(q.querySelector(".q").textContent, "Your answer: " + s, ""); }
+    });
+    if (!anyQ) lines.push("(No knowledge-check answers yet.)");
+    const diag = store.get("diag");
+    lines.push("", "WHAT DO YOU KNOW (diagnostic)", "", diag ? ("Result: " + diag) : "(Not completed yet.)");
+    const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = DECK_COURSE + "_Week" + DECK_WEEK + "_my_notes.txt";
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(a.href);
   });
 </script>
 </body>

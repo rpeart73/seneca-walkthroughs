@@ -68,7 +68,7 @@
 .deck-footer .deck-count { font-variant-numeric: tabular-nums; }
 
 /* keep slide content clear of the chrome (10px top bar, 34px footer band) */
-.reveal .slides section { padding: 36px 44px 52px; box-sizing: border-box; }
+.reveal .slides section { padding: 36px 44px 92px; box-sizing: border-box; }
 
 /* ---- generic type ---- */
 .reveal h1, .reveal h2, .reveal h3 { font-family: "IBM Plex Sans"; color: var(--ink); margin: 0 0 .35em; line-height: 1.12; text-transform: none; letter-spacing: 0; }
@@ -82,12 +82,12 @@
 .title-slide .term { color: var(--muted); font-size: .58em; margin-top: .8em; }
 
 /* ---- content_pair slide (fixed-height so narration scrolls, never overflows) ---- */
-.cp { display: grid; grid-template-columns: 40% 1fr; gap: 34px; height: 632px; align-items: start; }
+.cp { display: grid; grid-template-columns: 40% 1fr; gap: 34px; height: 592px; align-items: start; }
 .cp .media { display: flex; flex-direction: column; }
 .cp .media img { width: 100%; height: auto; max-height: 430px; object-fit: cover; border-radius: 6px; box-shadow: 0 6px 22px rgba(0,0,0,.16); }
 .cp .media figcaption { font-size: .46em; color: var(--muted); margin-top: .5em; font-style: italic; }
 .cp .media figcaption .credit { display: block; font-style: normal; font-size: .88em; margin-top: .25em; opacity: .85; }
-.cp .body { min-width: 0; display: flex; flex-direction: column; height: 632px; }
+.cp .body { min-width: 0; display: flex; flex-direction: column; height: 592px; }
 .cp h2 { font-size: 1.18em; flex: 0 0 auto; }
 .cp .narration { flex: 1 1 auto; min-height: 0; font-size: .62em; line-height: 1.5; color: var(--body); overflow-y: auto; padding-right: 10px; }
 .cp .narration:focus-visible { outline: 3px solid var(--seneca-red); outline-offset: 2px; border-radius: 4px; }
@@ -102,8 +102,8 @@
 .cp .concepts .chip { font-size: .42em; font-weight: 600; color: var(--seneca-red); border: 1.5px solid var(--seneca-red); border-radius: 999px; padding: .25em .8em; background: #fff; }
 
 /* no-media variant: clean single-column text slide when no NLM image exists */
-.cp.no-media { display: block; height: 632px; }
-.cp.no-media .body { height: 632px; max-width: 60ch; justify-content: flex-start; gap: .2em; }
+.cp.no-media { display: block; height: 592px; }
+.cp.no-media .body { height: 592px; max-width: 60ch; justify-content: flex-start; gap: .2em; }
 .cp.no-media h2 { font-size: 1.35em; }
 .cp.no-media .narration { flex: 0 0 auto; max-height: 360px; font-size: .68em; }
 .cp.no-media .insight { max-width: 60ch; }
@@ -134,7 +134,7 @@
 .flip.flipped .inner { transform: rotateY(180deg); }
 .flip .face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 10px; padding: 16px; box-sizing: border-box; display: flex; border: 1px solid var(--line); }
 .flip .front { background: #fff; border-left: 6px solid var(--seneca-red); align-items: center; }
-.flip .front .term { font-weight: 700; font-size: .62em; color: var(--ink); }
+.flip .front .term { font-weight: 700; font-size: .66em; color: var(--ink); }
 .flip .back { background: var(--ink); color: #fff; transform: rotateY(180deg); overflow-y: auto; }
 .flip .back .def { font-size: .44em; line-height: 1.42; }
 
@@ -146,6 +146,71 @@
 /* ---- references ---- */
 .refs p { font-size: .52em; line-height: 1.5; color: var(--body); margin: 0 0 .55em; padding-left: 1.4em; text-indent: -1.4em; }
 
+/* ---- reflection capture on Think prompts ---- */
+.cp .reflect, .cp.no-media .reflect {
+  display: block; width: 100%; margin-top: .5em; box-sizing: border-box;
+  font-family: inherit; font-size: .5em; line-height: 1.4; color: var(--body);
+  border: 1.5px solid var(--line); border-radius: 6px; padding: .5em .65em; resize: vertical;
+}
+.cp .reflect:focus-visible { outline: 3px solid var(--seneca-red); outline-offset: 1px; border-color: var(--seneca-red); }
+.cp .reflect::placeholder { color: #9a9a9a; }
+
+/* ---- shared option buttons (knowledge check + diagnostic) ---- */
+.opts { display: flex; flex-direction: column; gap: .4em; }
+.opt {
+  text-align: left; font-family: inherit; font-size: .58em; line-height: 1.3;
+  padding: .55em .85em; border: 1.5px solid var(--line); border-radius: 8px;
+  background: #fff; color: var(--body); cursor: pointer; transition: border-color .12s, background .12s;
+}
+.opt:hover { border-color: var(--muted); }
+.opt:focus-visible { outline: 3px solid var(--seneca-red); outline-offset: 2px; }
+.opt.chosen { border-color: var(--ink); background: #eef1f4; }
+.opt.is-answer { border-color: #1a7f37; background: #eaf6ec; }
+.opt.is-answer::after { content: "  (correct answer)"; color: #1a7f37; font-weight: 600; }
+.opt.wrong { border-color: var(--seneca-red); background: #fdeceb; }
+
+/* ---- knowledge check (formative quiz: instant feedback) ---- */
+.quiz .subtitle { color: var(--muted); font-size: .6em; margin-bottom: .8em; }
+.quiz-wrap { display: flex; flex-direction: column; gap: 1em; max-height: 496px; overflow-y: auto; padding-right: 8px; }
+.quiz-q .q { font-weight: 600; font-size: .66em; margin: 0 0 .5em; color: var(--ink); }
+.quiz-q .feedback { font-size: .56em; font-weight: 700; margin-top: .45em; color: var(--ink); }
+.quiz-q .explain { font-size: .54em; line-height: 1.4; color: var(--muted); margin-top: .3em; display: none; }
+.quiz-q.answered .explain { display: block; }
+
+/* ---- diagnostic (What Do You Know: hidden answers, score range) ---- */
+.diagnostic .subtitle { color: var(--muted); font-size: .58em; margin-bottom: .7em; }
+.diag-wrap { display: flex; flex-direction: column; gap: .7em; max-height: 396px; overflow-y: auto; padding-right: 8px; }
+.dq .q { font-weight: 600; font-size: .6em; margin: 0 0 .35em; color: var(--ink); }
+.diag-actions { margin-top: .8em; display: flex; flex-direction: column; gap: .5em; }
+.diag-go {
+  align-self: flex-start; font-family: inherit; font-size: .56em; font-weight: 600;
+  color: #fff; background: var(--seneca-red); border: 0; border-radius: 8px; padding: .55em 1.1em; cursor: pointer;
+}
+.diag-go:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+.diag-result { font-size: .56em; line-height: 1.5; color: var(--body); }
+.diag-result .band { color: var(--seneca-red); font-weight: 700; }
+.diag-bands { display: none; }
+
+/* ---- navigation + utility control bar (above the footer) ---- */
+.deck-nav {
+  position: fixed; left: 0; right: 0; bottom: var(--footer-h); height: 48px; z-index: 45;
+  background: #fff; border-top: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 18px;
+}
+.deck-nav button {
+  font-family: "IBM Plex Sans", sans-serif; font-size: 14px; font-weight: 600;
+  border-radius: 999px; padding: 8px 20px; border: 0; cursor: pointer;
+}
+.deck-nav button:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+.nav-prev, .nav-next { background: var(--seneca-red); color: #fff; min-width: 96px; }
+.nav-prev:hover, .nav-next:hover { filter: brightness(1.06); }
+.nav-prev:disabled, .nav-next:disabled { background: #e0e0e0; color: #9a9a9a; cursor: default; filter: none; }
+.nav-save { background: #fff; color: var(--seneca-red); border: 1.5px solid var(--seneca-red); }
+.nav-save:hover { background: #fff5f4; }
+
+/* ---- progress bar (Reveal built-in, skinned Seneca red, under the top bar) ---- */
+.reveal .progress { color: var(--seneca-red); height: 5px; top: 10px; bottom: auto; }
+
 /* ---- accessibility: respect reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
   .flip .inner { transition: none; }
@@ -155,6 +220,8 @@
 /* ---- print / PDF export (reveal print-pdf): show narration fully ---- */
 @media print {
   .cp .narration { max-height: none; overflow: visible; }
+  .deck-export { display: none; }
+  .quiz-q .explain { display: block; }
   .flip { height: auto; }
   .flip .inner { transform: none !important; }
   .flip .face { position: relative; backface-visibility: visible; }
