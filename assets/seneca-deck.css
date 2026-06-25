@@ -189,14 +189,15 @@
   color: #fff; background: var(--seneca-red); border: 0; border-radius: 8px; padding: .55em 1.1em; cursor: pointer;
 }
 .diag-go:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
-.diag-result { font-size: .56em; line-height: 1.5; color: var(--body); }
+.diag-result { font-size: .56em; line-height: 1.5; color: var(--body); display: flex; gap: 36px; align-items: flex-start; flex-wrap: wrap; }
+.diag-left { flex: 0 0 auto; max-width: 50%; }
 .diag-score { font-size: 1.1em; font-weight: 700; color: var(--ink); }
 .diag-rubric-label { font-size: .94em; margin-top: .35em; }
 .diag-rubric-label strong { color: var(--seneca-red); }
 .rubric-scale { display: flex; flex-wrap: wrap; gap: 7px; margin: .6em 0 .45em; }
 .rubric-scale .lvl { font-size: .82em; font-weight: 600; padding: .42em .9em; border-radius: 999px; border: 1.5px solid var(--line); color: var(--muted); background: #fff; }
 .rubric-scale .lvl.on { background: var(--seneca-red); color: #fff; border-color: var(--seneca-red); }
-.diag-note { font-size: .9em; margin-top: .25em; max-width: 62ch; }
+.diag-note { font-size: .9em; flex: 1 1 280px; min-width: 240px; border-left: 3px solid var(--seneca-red); padding-left: 18px; }
 .diag-bands { display: none; }
 /* once the result is shown, collapse the questions so the rubric result has the full slide */
 .diagnostic.revealed .diag-wrap, .diagnostic.revealed .diag-go { display: none; }
