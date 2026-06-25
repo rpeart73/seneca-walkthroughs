@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>BFS218 Week 3 : Weekly Walkthrough</title>
-<link rel="stylesheet" href="assets/reset.css?v=20260625142430">
-<link rel="stylesheet" href="assets/reveal.css?v=20260625142430">
-<link rel="stylesheet" href="assets/seneca-deck.css?v=20260625142430">
+<link rel="stylesheet" href="assets/reset.css?v=20260625143110">
+<link rel="stylesheet" href="assets/reveal.css?v=20260625143110">
+<link rel="stylesheet" href="assets/seneca-deck.css?v=20260625143110">
 </head>
 <body>
 <div class="deck-topbar"></div>
@@ -277,8 +277,10 @@
 </section>
 </div></div>
 
-<script src="assets/reveal.js?v=20260625142430"></script>
-<script src="assets/notes.js?v=20260625142430"></script>
+<script src="assets/reveal.js?v=20260625143110"></script>
+<script src="assets/notes.js?v=20260625143110"></script>
+<script src="assets/jszip.min.js?v=20260625143110"></script>
+<script src="assets/deck-docx.js?v=20260625143110"></script>
 <script>
   const DECK_COURSE = "BFS218", DECK_WEEK = "3";
   const deck = new Reveal({
@@ -400,33 +402,43 @@
   // Everything stays on the device; nothing is uploaded.
   const exportBtn = document.getElementById("deck-export");
   if (exportBtn) exportBtn.addEventListener("click", () => {
-    const lines = ["My Walkthrough Notes", DECK_COURSE + " Week " + DECK_WEEK,
-                   "Generated on your device.", "", "REFLECTIONS", ""];
+    const blocks = [
+      { style: "title", text: "My Walkthrough Notes" },
+      { style: "body", text: DECK_COURSE + " Week " + DECK_WEEK + " (generated on your device)" },
+      { style: "h", text: "Reflections" }
+    ];
     let any = false;
     document.querySelectorAll("textarea.reflect").forEach(t => {
       if (t.value.trim()) {
         any = true;
-        const p = t.closest(".think") ? t.closest(".think").querySelector("p").textContent : "Prompt";
-        lines.push("Prompt: " + p, "You: " + t.value.trim(), "");
+        const p = t.closest(".think") ? t.closest(".think").querySelector("p").textContent : "Reflection prompt";
+        blocks.push({ style: "q", text: "Prompt: " + p }, { style: "body", text: "You: " + t.value.trim() });
       }
     });
-    if (!any) lines.push("(No reflections written yet.)", "");
-    lines.push("", "KNOWLEDGE CHECK", "");
+    if (!any) blocks.push({ style: "body", text: "(No reflections written yet.)" });
+    blocks.push({ style: "h", text: "Knowledge Check" });
     let anyQ = false;
     document.querySelectorAll(".quiz-q").forEach(q => {
       const s = store.get("quiz:" + q.dataset.qid);
-      if (s) { anyQ = true; lines.push(q.querySelector(".q").textContent, "Your answer: " + s, ""); }
+      if (s) { anyQ = true; blocks.push({ style: "q", text: q.querySelector(".q").textContent }, { style: "body", text: "Your answer: " + s }); }
     });
-    if (!anyQ) lines.push("(No knowledge-check answers yet.)");
+    if (!anyQ) blocks.push({ style: "body", text: "(No knowledge-check answers yet.)" });
+    blocks.push({ style: "h", text: "What Do You Know (diagnostic)" });
     const diag = store.get("diag");
-    lines.push("", "WHAT DO YOU KNOW (diagnostic)", "", diag ? ("Result: " + diag) : "(Not completed yet.)");
-    const blob = new Blob([lines.join("\n")], { type: "text/plain" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = DECK_COURSE + "_Week" + DECK_WEEK + "_my_notes.txt";
-    document.body.appendChild(a); a.click(); a.remove();
-    URL.revokeObjectURL(a.href);
-    notesDirty = false;
+    blocks.push({ style: "body", text: diag ? ("Result: " + diag) : "(Not completed yet.)" });
+    const save = (blob, ext) => {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = DECK_COURSE + "_Week" + DECK_WEEK + "_my_notes." + ext;
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(a.href);
+      notesDirty = false;
+    };
+    if (window.deckDocx && window.JSZip) {
+      deckDocx.build(blocks).generateAsync({ type: "blob", mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" }).then(b => save(b, "docx"));
+    } else {
+      save(new Blob([blocks.map(b => b.text).join("\n")], { type: "text/plain" }), "txt");
+    }
   });
 
   // Force-save nudge: if notes were made this session but not downloaded, warn
