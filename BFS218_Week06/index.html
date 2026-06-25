@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>BFS218 Week 6 : Weekly Walkthrough</title>
-<link rel="stylesheet" href="assets/reset.css?v=20260625185049">
-<link rel="stylesheet" href="assets/reveal.css?v=20260625185049">
-<link rel="stylesheet" href="assets/seneca-deck.css?v=20260625185049">
+<link rel="stylesheet" href="assets/reset.css?v=20260625190110">
+<link rel="stylesheet" href="assets/reveal.css?v=20260625190110">
+<link rel="stylesheet" href="assets/seneca-deck.css?v=20260625190110">
 </head>
 <body>
 <div class="deck-topbar"></div>
@@ -31,6 +31,37 @@
   <div class="wk">Week 6: Algorithms in Canada: Borders, Policing, Housing</div>
   <div class="term">Fall 2026</div>
 </section>
+<section class="closing diagnostic" data-background-color="#ffffff">
+  <h2>What Do You Know?</h2>
+  <div class="subtitle">A quick check before we begin. Answer all seven to see where you are starting from. This is not graded.</div>
+  <div class="diag-wrap"><div class="dq" data-qid="d0">
+        <p class="q">1. The Office of the Privacy Commissioner of Canada found that the RCMP&#x27;s use of Clearview AI:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Was fully compliant with federal privacy law</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Violated federal privacy law</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Was never actually deployed</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Was authorized by Parliament</button></div>
+      </div><div class="dq" data-qid="d1">
+        <p class="q">2. In Ewert v Canada (2018), the Supreme Court found that Correctional Service Canada breached its duty because the risk tools were:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Used without a warrant</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Never validated for Indigenous people</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Designed by a private company</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Banned in other provinces</button></div>
+      </div><div class="dq" data-qid="d2">
+        <p class="q">3. Petra Molnar describes the border as a testing ground for digital border technologies. Who is tested on first:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Police officers</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Migrants and refugees, who have the least power to refuse</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Government regulators</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Software engineers</button></div>
+      </div><div class="dq" data-qid="d3">
+        <p class="q">4. Singh (2021) notes that much algorithmic policing in Canada has been authorized through:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Clear, debated legislation</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Court rulings rather than legislation</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Municipal bylaws only</button><button type="button" class="opt" data-correct="0" aria-pressed="false">International treaties</button></div>
+      </div><div class="dq" data-qid="d4">
+        <p class="q">5. Clearview AI built its face-search tool by:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Buying licensed photo libraries</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Scraping billions of images</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Photographing people at borders</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Using only police mugshots</button></div>
+      </div><div class="dq" data-qid="d5">
+        <p class="q">6. Robertson, Khoo, and Song (2020) document the spread across Canada of:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Digital border technologies</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Algorithmic policing</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Beauty filters</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Hospital triage tools</button></div>
+      </div><div class="dq" data-qid="d6">
+        <p class="q">7. Mapping the three Canadian cases to the dimensions, Clearview AI is best read as:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Engineered inequity</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Default discrimination</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Coded exposure</button><button type="button" class="opt" data-correct="0" aria-pressed="false">A neutral tool</button></div>
+      </div></div>
+  <div class="diag-actions">
+    <button type="button" class="diag-go">See my result</button>
+    <div class="diag-result" role="status" aria-live="polite"></div>
+  </div>
+  <script type="application/json" class="diag-bands">[{"min": 0, "max": 2, "label": "Emerging", "note": "You are just meeting these ideas, which is exactly what this week is for. Watch for the key terms as they come up."}, {"min": 3, "max": 4, "label": "Developing", "note": "You have the beginnings of this. Use the walkthrough to firm up the parts you were unsure of."}, {"min": 5, "max": 6, "label": "Proficient", "note": "You have a solid working grasp. Push on the nuance and the connections this week."}, {"min": 7, "max": 7, "label": "Advanced", "note": "You came in with a strong command. Use the week to deepen the ideas and test their edges."}]</script>
+</section>
 <section class="closing outcomes" data-background-color="#ffffff">
   <h2>Purpose and Learning Outcomes</h2>
   <div class="purpose"><p>Week 6 grounds the New Jim Code in Canada. Having named the dimensions, students now examine documented Canadian cases in borders, policing, and corrections, and connect each to the harm it produces for racialized and Indigenous communities.</p></div>
@@ -41,6 +72,22 @@
   <h2>Guiding Questions</h2>
   <div class="subtitle">Hold these in mind as you move through the week.</div>
   <ul class="guiding-list"><li class="fragment">Which dimension, engineered inequity, default discrimination, or coded exposure, do you see in the RCMP&#x27;s use of Clearview AI?</li><li class="fragment">In Ewert v Canada, why did it matter that the risk tools were not validated for Indigenous offenders? Which dimension is that?</li><li class="fragment">Molnar calls border technology a testing ground. Who is it tested on, and why there first?</li><li class="fragment">Singh notes much algorithmic policing is authorized by courts, not legislation. Why does that gap matter?</li><li class="fragment">Where in your own Canadian life, your city, your program, your future field, do these systems already operate?</li></ul>
+</section>
+<section data-background-color="#ffffff">
+  <div class="cp">
+    <figure class="media">
+      <img class="media-img diagram" src="images/fig-week06.svg" alt="Three Canadian domains where algorithms operate, with a documented case in each">
+      <figcaption>Three Canadian domains where algorithms operate, with a documented case in each<span class="credit">Molnar (2023); Robertson (2020); Office of the Privacy Commissioner of Canada (2021); Ewert v Canada (2018)</span></figcaption>
+    </figure>
+    <div class="body">
+      <h2>Same Anatomy, New Address</h2>
+      <div class="narration" tabindex="0" role="region" aria-label="Slide narration"><p>We take three domains and a documented case in each: borders, policing, and the wider field of corrections and services. At the border, Petra Molnar studies digital border technologies that work through logics of exclusion, with migrants and refugees as the testing ground. In policing, Robertson, Khoo, and Song document algorithmic policing across Canada, much of it authorized by courts rather than legislation. Two cases make it concrete: the Privacy Commissioner found the RCMP&#x27;s use of Clearview AI violated federal privacy law, and in Ewert v Canada the Supreme Court found Correctional Service Canada breached its duty by using risk tools never validated for Indigenous people.</p></div>
+      
+      
+      <div class="concepts"><span class="chip">Algorithmic policing</span><span class="chip">Digital border technologies</span><span class="chip">Two Canadian anchors</span><span class="chip">Clearview AI</span><span class="chip">Ewert v Canada</span></div>
+    </div>
+  </div>
+  <aside class="notes"><p>We take three domains and a documented case in each: borders, policing, and the wider field of corrections and services. At the border, Petra Molnar studies digital border technologies that work through logics of exclusion, with migrants and refugees as the testing ground. In policing, Robertson, Khoo, and Song document algorithmic policing across Canada, much of it authorized by courts rather than legislation. Two cases make it concrete: the Privacy Commissioner found the RCMP&#x27;s use of Clearview AI violated federal privacy law, and in Ewert v Canada the Supreme Court found Correctional Service Canada breached its duty by using risk tools never validated for Indigenous people.</p></aside>
 </section>
 <section data-background-color="#ffffff">
   <div class="cp no-media">
@@ -125,6 +172,31 @@
     placeholder="Write your reflection here. It saves automatically as you type."></textarea>
   <p class="reflect-note">Your notes save automatically on this device and stay after you close your browser or shut down. Use <b>Save my notes</b> (below) to download a copy you can keep or open on another device.</p>
 </section>
+<section class="closing quiz" data-background-color="#ffffff">
+  <h2>What You Now Know</h2>
+  <div class="subtitle">Check what you have learned</div>
+  <div class="quiz-wrap"><div class="quiz-q" data-qid="q0">
+        <p class="q">Why did it matter in Ewert v Canada that the risk tools were not validated for Indigenous offenders:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">The tools were too expensive to run</button><button type="button" class="opt" data-correct="1">Outcomes were discriminatory by default, so the court named it as a breach of duty</button><button type="button" class="opt" data-correct="0">The tools were never used in practice</button><button type="button" class="opt" data-correct="0">Validation is only a formality</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">Ewert is default discrimination named by the highest court: relying on tools never shown valid for Indigenous people breached Correctional Service Canada&#x27;s statutory duty.</div>
+      </div><div class="quiz-q" data-qid="q1">
+        <p class="q">Molnar calls border technology a testing ground because:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">Borders have the best internet</button><button type="button" class="opt" data-correct="1">Migrants and refugees have the least power to refuse, so tools are tried there before wider use</button><button type="button" class="opt" data-correct="0">Border guards request new tools</button><button type="button" class="opt" data-correct="0">It is cheaper to test outdoors</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">Digital border technologies operate through logics of exclusion, and those with the least power to refuse become the testing ground for tools later used more widely.</div>
+      </div><div class="quiz-q" data-qid="q2">
+        <p class="q">Singh&#x27;s point that much algorithmic policing is authorized by courts rather than legislation matters because:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">Courts move faster than police</button><button type="button" class="opt" data-correct="1">It leaves a gap in oversight, with no clear legislative rules</button><button type="button" class="opt" data-correct="0">Legislation would be unconstitutional</button><button type="button" class="opt" data-correct="0">It makes the tools more accurate</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">When authorization comes through court rulings instead of clear legislation, there is no debated legislative framework governing the tools, leaving an oversight gap.</div>
+      </div><div class="quiz-q" data-qid="q3">
+        <p class="q">The week&#x27;s core claim about the three Canadian cases is that they are:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">New dimensions of harm never seen before</button><button type="button" class="opt" data-correct="1">Same anatomy, new address: the familiar dimensions appearing in Canadian institutions</button><button type="button" class="opt" data-correct="0">Proof that the New Jim Code is only an American problem</button><button type="button" class="opt" data-correct="0">Unrelated to the New Jim Code</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">Clearview is coded exposure, Ewert is default discrimination, border tech is engineered inequity: same anatomy, new address, running in Canadian institutions.</div>
+      </div></div>
+</section>
 <section class="closing readings-slide" data-background-color="#ffffff">
   <h2>Readings</h2>
   <div class="subtitle">What to read this week. The texts live on Blackboard.</div>
@@ -137,12 +209,12 @@
 </section>
 </div></div>
 
-<script src="assets/reveal.js?v=20260625185049"></script>
-<script src="assets/notes.js?v=20260625185049"></script>
-<script src="assets/jszip.min.js?v=20260625185049"></script>
-<script src="assets/deck-docx.js?v=20260625185049"></script>
+<script src="assets/reveal.js?v=20260625190110"></script>
+<script src="assets/notes.js?v=20260625190110"></script>
+<script src="assets/jszip.min.js?v=20260625190110"></script>
+<script src="assets/deck-docx.js?v=20260625190110"></script>
 <script>
-  const DECK_COURSE = "BFS218", DECK_WEEK = "6", DECK_VER = "20260625185049";
+  const DECK_COURSE = "BFS218", DECK_WEEK = "6", DECK_VER = "20260625190110";
   // self-update: if this cached page is older than the deployed build, reload fresh.
   // Ends the "I do not see my changes" caching problem without a manual hard refresh.
   fetch("version.json?cb=" + Math.random()).then(r => r.json()).then(j => {

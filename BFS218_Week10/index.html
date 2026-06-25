@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>BFS218 Week 10 : Weekly Walkthrough</title>
-<link rel="stylesheet" href="assets/reset.css?v=20260625185049">
-<link rel="stylesheet" href="assets/reveal.css?v=20260625185049">
-<link rel="stylesheet" href="assets/seneca-deck.css?v=20260625185049">
+<link rel="stylesheet" href="assets/reset.css?v=20260625190110">
+<link rel="stylesheet" href="assets/reveal.css?v=20260625190110">
+<link rel="stylesheet" href="assets/seneca-deck.css?v=20260625190110">
 </head>
 <body>
 <div class="deck-topbar"></div>
@@ -31,6 +31,37 @@
   <div class="wk">Week 10: Algorithmic Gatekeeping: Employment and Credit</div>
   <div class="term">Fall 2026</div>
 </section>
+<section class="closing diagnostic" data-background-color="#ffffff">
+  <h2>What Do You Know?</h2>
+  <div class="subtitle">A quick check before we begin. Answer all seven to see where you are starting from. This is not graded.</div>
+  <div class="diag-wrap"><div class="dq" data-qid="d0">
+        <p class="q">1. Algorithmic gatekeeping refers to:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">A security feature that protects user passwords</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Automated systems that decide who is granted access, such as who is hired, approved for credit, or admitted</button><button type="button" class="opt" data-correct="0" aria-pressed="false">A law that bans biased algorithms</button><button type="button" class="opt" data-correct="0" aria-pressed="false">A way to speed up internet connections</button></div>
+      </div><div class="dq" data-qid="d1">
+        <p class="q">2. A common harm of an algorithmic gate is that the person kept out often:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Receives a detailed written explanation</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Has no one to ask and no decision to appeal</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Can always reapply the next day</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Is automatically approved on a second try</button></div>
+      </div><div class="dq" data-qid="d2">
+        <p class="q">3. Bird, Castleman, and Song (2023) studied predictive models that colleges use to:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Set tuition prices for each program</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Flag students as likely to succeed or fail</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Schedule classes across the campus</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Detect plagiarism in student essays</button></div>
+      </div><div class="dq" data-qid="d3">
+        <p class="q">4. Bird, Castleman, and Song found that algorithmic bias in these predictive tools can:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="1" aria-pressed="false">Reinforce racial inequities</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Remove all human error from grading</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Guarantee fairer outcomes for every student</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Only affect students who opt in</button></div>
+      </div><div class="dq" data-qid="d4">
+        <p class="q">5. Devlin (2023) says inequality within the algorithm lives in:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">The price charged to use the software</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Its data and design</button><button type="button" class="opt" data-correct="0" aria-pressed="false">The speed of the computer running it</button><button type="button" class="opt" data-correct="0" aria-pressed="false">The number of users it serves</button></div>
+      </div><div class="dq" data-qid="d5">
+        <p class="q">6. Devlin (2023) says inequality without the algorithm lives in:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="1" aria-pressed="false">Who builds these systems and who is subject to them</button><button type="button" class="opt" data-correct="0" aria-pressed="false">The font and colours on the screen</button><button type="button" class="opt" data-correct="0" aria-pressed="false">The country where the server is located</button><button type="button" class="opt" data-correct="0" aria-pressed="false">The age of the programming language</button></div>
+      </div><div class="dq" data-qid="d6">
+        <p class="q">7. Safiya Umoja Noble argues that search and ranking systems can:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0" aria-pressed="false">Only be trusted when run by a government</button><button type="button" class="opt" data-correct="1" aria-pressed="false">Reproduce racism and sexism while presenting as neutral</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Never make a mistake once trained</button><button type="button" class="opt" data-correct="0" aria-pressed="false">Treat every group identically by default</button></div>
+      </div></div>
+  <div class="diag-actions">
+    <button type="button" class="diag-go">See my result</button>
+    <div class="diag-result" role="status" aria-live="polite"></div>
+  </div>
+  <script type="application/json" class="diag-bands">[{"min": 0, "max": 2, "label": "Emerging", "note": "You are just meeting these ideas, which is exactly what this week is for. Watch for the key terms as they come up."}, {"min": 3, "max": 4, "label": "Developing", "note": "You have the beginnings of this. Use the walkthrough to firm up the parts you were unsure of."}, {"min": 5, "max": 6, "label": "Proficient", "note": "You have a solid working grasp. Push on the nuance and the connections this week."}, {"min": 7, "max": 7, "label": "Advanced", "note": "You came in with a strong command. Use the week to deepen the ideas and test their edges."}]</script>
+</section>
 <section class="closing outcomes" data-background-color="#ffffff">
   <h2>Purpose and Learning Outcomes</h2>
   <div class="purpose"><p>Week 10 examines algorithmic gatekeeping, the automated systems that decide access in hiring, lending, and education. Students analyse how these gates can reproduce racial inequity at scale, and ask who is accountable when they do.</p></div>
@@ -41,6 +72,22 @@
   <h2>Guiding Questions</h2>
   <div class="subtitle">Hold these in mind as you move through the week.</div>
   <ul class="guiding-list"><li class="fragment">When an algorithm decides who is let through a gate, who can the person who is kept out actually ask?</li><li class="fragment">Bird, Castleman, and Song found bias in predicting student success. What is the harm in being flagged, early and wrongly, as likely to fail?</li><li class="fragment">Devlin distinguishes inequality within and without the algorithm. What does each mean, and why do both matter?</li><li class="fragment">Noble argues search results are not neutral. Where have you seen a ranking that quietly sorted people?</li><li class="fragment">Which gate in your own life, a job portal, a loan, an admission, a benefit, was decided in part by a system?</li></ul>
+</section>
+<section data-background-color="#ffffff">
+  <div class="cp">
+    <figure class="media">
+      <img class="media-img diagram" src="images/fig-week10.svg" alt="An algorithmic gate sorts applicants for jobs and credit into let through and kept out">
+      <figcaption>An algorithmic gate sorts applicants for jobs and credit into let through and kept out<span class="credit">Bird (2023); Devlin (2023)</span></figcaption>
+    </figure>
+    <div class="body">
+      <h2>Picture a gate</h2>
+      <div class="narration" tabindex="0" role="region" aria-label="Slide narration"><p>Picture a gate. Many applicants on one side, an automated decision in the middle, two streams on the other: let through, and kept out. The gate decides at scale and in an instant. And every gate an algorithm now guards was once guarded by a person you could at least ask to explain.</p></div>
+      
+      
+      <div class="concepts"><span class="chip">Algorithmic gatekeeping</span><span class="chip">Bias in predicting success</span><span class="chip">Inequality within and without the algorithm</span></div>
+    </div>
+  </div>
+  <aside class="notes"><p>Picture a gate. Many applicants on one side, an automated decision in the middle, two streams on the other: let through, and kept out. The gate decides at scale and in an instant. And every gate an algorithm now guards was once guarded by a person you could at least ask to explain.</p></aside>
 </section>
 <section data-background-color="#ffffff">
   <div class="cp no-media">
@@ -125,6 +172,31 @@
     placeholder="Write your reflection here. It saves automatically as you type."></textarea>
   <p class="reflect-note">Your notes save automatically on this device and stay after you close your browser or shut down. Use <b>Save my notes</b> (below) to download a copy you can keep or open on another device.</p>
 </section>
+<section class="closing quiz" data-background-color="#ffffff">
+  <h2>What You Now Know</h2>
+  <div class="subtitle">Check what you have learned</div>
+  <div class="quiz-wrap"><div class="quiz-q" data-qid="q0">
+        <p class="q">Why is algorithmic gatekeeping described as deciding at scale and in an instant?</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">Because it requires a large staff to operate</button><button type="button" class="opt" data-correct="1">Because an automated decision sorts many applicants quickly, with no person to ask</button><button type="button" class="opt" data-correct="0">Because it only runs once a year</button><button type="button" class="opt" data-correct="0">Because each case is reviewed slowly by hand</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">The gate decides at scale and in an instant, and every gate an algorithm now guards was once guarded by a person you could at least ask to explain.</div>
+      </div><div class="quiz-q" data-qid="q1">
+        <p class="q">What is the harm Bird, Castleman, and Song point to in flagging students early?</p>
+        <div class="opts"><button type="button" class="opt" data-correct="1">A tool sold as help can label some students, early and wrongly, as poor bets</button><button type="button" class="opt" data-correct="0">Students get too much support too soon</button><button type="button" class="opt" data-correct="0">The models are too slow to be useful</button><button type="button" class="opt" data-correct="0">Colleges stop using data entirely</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">They found algorithmic bias can reinforce racial inequities, so a tool sold as help can label some students, early and wrongly, as poor bets.</div>
+      </div><div class="quiz-q" data-qid="q2">
+        <p class="q">Devlin distinguishes inequality within and without the algorithm. Both matter because:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">Only the data inside the system ever causes harm</button><button type="button" class="opt" data-correct="1">Bias sits in the data and design and also in who builds the systems and who is subject to them</button><button type="button" class="opt" data-correct="0">The two are the same thing under a different name</button><button type="button" class="opt" data-correct="0">Neither can be changed once the system ships</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">Devlin names where the inequality lives: within the algorithm, in its data and design, and without it, in who builds these systems and who is subject to them.</div>
+      </div><div class="quiz-q" data-qid="q3">
+        <p class="q">When you meet a gate, the week asks you to ask:</p>
+        <div class="opts"><button type="button" class="opt" data-correct="0">How fast the system runs</button><button type="button" class="opt" data-correct="1">Who it lets through, who it keeps out, whether the harm falls along race, gender, or class, and who can be asked to answer for it</button><button type="button" class="opt" data-correct="0">Which company sells the cheapest version</button><button type="button" class="opt" data-correct="0">Whether the interface looks modern</button></div>
+        <div class="feedback" role="status" aria-live="polite"></div>
+        <div class="explain">So when you meet a gate, ask who it lets through, who it keeps out, whether the harm falls along race, gender, or class, and who can be asked to answer for it.</div>
+      </div></div>
+</section>
 <section class="closing readings-slide" data-background-color="#ffffff">
   <h2>Readings</h2>
   <div class="subtitle">What to read this week. The texts live on Blackboard.</div>
@@ -137,12 +209,12 @@
 </section>
 </div></div>
 
-<script src="assets/reveal.js?v=20260625185049"></script>
-<script src="assets/notes.js?v=20260625185049"></script>
-<script src="assets/jszip.min.js?v=20260625185049"></script>
-<script src="assets/deck-docx.js?v=20260625185049"></script>
+<script src="assets/reveal.js?v=20260625190110"></script>
+<script src="assets/notes.js?v=20260625190110"></script>
+<script src="assets/jszip.min.js?v=20260625190110"></script>
+<script src="assets/deck-docx.js?v=20260625190110"></script>
 <script>
-  const DECK_COURSE = "BFS218", DECK_WEEK = "10", DECK_VER = "20260625185049";
+  const DECK_COURSE = "BFS218", DECK_WEEK = "10", DECK_VER = "20260625190110";
   // self-update: if this cached page is older than the deployed build, reload fresh.
   // Ends the "I do not see my changes" caching problem without a manual hard refresh.
   fetch("version.json?cb=" + Math.random()).then(r => r.json()).then(j => {
