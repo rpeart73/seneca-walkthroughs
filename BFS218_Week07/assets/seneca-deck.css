@@ -140,7 +140,7 @@
 .flip .front { background: #fff; border-left: 6px solid var(--seneca-red); align-items: center; }
 .flip .front .term { font-weight: 700; font-size: .92em; color: var(--ink); }
 .flip .back { background: var(--ink); color: #fff; transform: rotateY(180deg); flex-direction: column; justify-content: center; overflow-y: auto; }
-.flip .back .def { font-size: .58em; line-height: 1.5; }
+.flip .back .def { font-size: .52em; line-height: 1.46; }
 
 /* ---- reminder box ---- */
 .reminder { margin-top: 1em; border: 1.5px solid var(--seneca-red); background: var(--light); border-radius: 8px; padding: .7em 1em; }

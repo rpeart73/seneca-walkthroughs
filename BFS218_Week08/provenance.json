@@ -3,13 +3,13 @@
   "week": 8,
   "title": "Indigenous Data Sovereignty and OCAP Principles",
   "term": "Fall 2026",
-  "slides": 6,
-  "content_pairs": 1,
+  "slides": 11,
+  "content_pairs": 4,
   "images_present": 0,
-  "images_missing": 1,
+  "images_missing": 4,
   "source_yaml": "../content/BFS218/week08.yaml",
   "logo_embedded": true,
   "rel": "BFS218_Week08/index.html",
-  "generated": "2026-06-25T18:38:46",
+  "generated": "2026-06-25T18:50:49",
   "generator": "web_builder.py (Reveal.js 5.1.0)"
 }
