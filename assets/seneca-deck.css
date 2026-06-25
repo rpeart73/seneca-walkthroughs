@@ -85,6 +85,8 @@
 .cp { display: grid; grid-template-columns: 40% 1fr; gap: 34px; height: 592px; align-items: start; }
 .cp .media { display: flex; flex-direction: column; }
 .cp .media img { width: 100%; height: auto; max-height: 430px; object-fit: cover; border-radius: 6px; box-shadow: 0 6px 22px rgba(0,0,0,.16); }
+/* diagrams already have a white background, so blend them into the slide (no card frame) */
+.cp .media img.diagram { max-height: 470px; object-fit: contain; border-radius: 0; box-shadow: none; }
 .cp .media figcaption { font-size: .46em; color: var(--muted); margin-top: .5em; font-style: italic; }
 .cp .media figcaption .credit { display: block; font-style: normal; font-size: .88em; margin-top: .25em; opacity: .85; }
 .cp .body { min-width: 0; display: flex; flex-direction: column; height: 592px; }
