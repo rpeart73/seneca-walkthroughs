@@ -134,9 +134,9 @@
 .flip.flipped .inner { transform: rotateY(180deg); }
 .flip .face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 10px; padding: 16px; box-sizing: border-box; display: flex; border: 1px solid var(--line); }
 .flip .front { background: #fff; border-left: 6px solid var(--seneca-red); align-items: center; }
-.flip .front .term { font-weight: 700; font-size: .66em; color: var(--ink); }
+.flip .front .term { font-weight: 700; font-size: .82em; color: var(--ink); }
 .flip .back { background: var(--ink); color: #fff; transform: rotateY(180deg); overflow-y: auto; }
-.flip .back .def { font-size: .44em; line-height: 1.42; }
+.flip .back .def { font-size: .5em; line-height: 1.42; }
 
 /* ---- reminder box ---- */
 .reminder { margin-top: 1em; border: 1.5px solid var(--seneca-red); background: var(--light); border-radius: 8px; padding: .7em 1em; }
