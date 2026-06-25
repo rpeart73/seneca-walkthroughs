@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>BFS218 Week 3 : Weekly Walkthrough</title>
-<link rel="stylesheet" href="assets/reset.css?v=20260625141325">
-<link rel="stylesheet" href="assets/reveal.css?v=20260625141325">
-<link rel="stylesheet" href="assets/seneca-deck.css?v=20260625141325">
+<link rel="stylesheet" href="assets/reset.css?v=20260625142430">
+<link rel="stylesheet" href="assets/reveal.css?v=20260625142430">
+<link rel="stylesheet" href="assets/seneca-deck.css?v=20260625142430">
 </head>
 <body>
 <div class="deck-topbar"></div>
@@ -86,7 +86,7 @@
         <div class="eyebrow">Think about it</div><p>If a system works perfectly for some people and fails for others, is the failure technical or political?</p>
         <textarea class="reflect" data-rk="think:the-34-7-question" rows="2"
           aria-label="Your reflection on this prompt"
-          placeholder="Jot your thinking here. Saved on this device only; collect it later with Save my notes."></textarea>
+          placeholder="Jot your thinking here. It saves automatically on this device; use Save my notes to keep a copy."></textarea>
       </div>
       <div class="concepts"><span class="chip">Intersectional Bias</span><span class="chip">Gender Shades</span><span class="chip">Algorithmic Accountability</span></div>
     </div>
@@ -121,7 +121,7 @@
         <div class="eyebrow">Think about it</div><p>What does it mean for a technology to treat whiteness as the default? How would you recognize this in systems you use every day?</p>
         <textarea class="reflect" data-rk="think:default-discrimination" rows="2"
           aria-label="Your reflection on this prompt"
-          placeholder="Jot your thinking here. Saved on this device only; collect it later with Save my notes."></textarea>
+          placeholder="Jot your thinking here. It saves automatically on this device; use Save my notes to keep a copy."></textarea>
       </div>
       <div class="concepts"><span class="chip">Default Discrimination</span><span class="chip">Proxy Variables</span><span class="chip">Algorithmic Proxies</span><span class="chip">Benjamin</span></div>
     </div>
@@ -218,7 +218,8 @@
 </p>
   <textarea class="reflect" data-rk="reflection:think-of-a-technology-you-used-today-a-search-en" rows="5"
     aria-label="Your reflection"
-    placeholder="Write your reflection here. Saved on this device only; collect it with Save my notes."></textarea>
+    placeholder="Write your reflection here. It saves automatically as you type."></textarea>
+  <p class="reflect-note">Your notes save automatically on this device and stay after you close your browser or shut down. Use <b>Save my notes</b> (below) to download a copy you can keep or open on another device.</p>
 </section>
 <section class="closing quiz" data-background-color="#ffffff">
   <h2>What You Now Know</h2>
@@ -276,8 +277,8 @@
 </section>
 </div></div>
 
-<script src="assets/reveal.js?v=20260625141325"></script>
-<script src="assets/notes.js?v=20260625141325"></script>
+<script src="assets/reveal.js?v=20260625142430"></script>
+<script src="assets/notes.js?v=20260625142430"></script>
 <script>
   const DECK_COURSE = "BFS218", DECK_WEEK = "3";
   const deck = new Reveal({
@@ -325,11 +326,12 @@
     get: k => { try { return localStorage.getItem(NS + k) || ""; } catch (e) { return ""; } },
     set: (k, v) => { try { localStorage.setItem(NS + k, v); } catch (e) {} }
   };
+  let notesDirty = false;  // notes made this session but not yet downloaded
 
   // reflections on the "Think about it" prompts: restore + autosave on this device
   document.querySelectorAll("textarea.reflect").forEach(t => {
     t.value = store.get(t.dataset.rk);
-    t.addEventListener("input", () => store.set(t.dataset.rk, t.value));
+    t.addEventListener("input", () => { store.set(t.dataset.rk, t.value); notesDirty = true; });
     t.addEventListener("keydown", e => e.stopPropagation());  // do not navigate slides while typing
   });
 
@@ -347,6 +349,7 @@
       q.classList.add("answered");
       fb.textContent = correct ? "Correct." : "Not quite. The correct answer is highlighted.";
       store.set("quiz:" + qid, btn.textContent + " || " + (correct ? "correct" : "incorrect"));
+      notesDirty = true;
     };
     opts.forEach(o => o.addEventListener("click", () => choose(o)));
     if (store.get("quiz:" + qid)) q.classList.add("answered");  // reveal explanation if seen before
@@ -383,6 +386,7 @@
         "<span class='band'>" + (b.label || "") + " (" + range + " range)</span><br>" + (b.note || "");
       d.classList.add("revealed");
       store.set("diag", score + "/" + n + " || " + (b.label || ""));
+      notesDirty = true;
     });
     const prior = store.get("diag");
     if (prior) result.textContent = "Previous result on this device: " + prior;
@@ -422,6 +426,14 @@
     a.download = DECK_COURSE + "_Week" + DECK_WEEK + "_my_notes.txt";
     document.body.appendChild(a); a.click(); a.remove();
     URL.revokeObjectURL(a.href);
+    notesDirty = false;
+  });
+
+  // Force-save nudge: if notes were made this session but not downloaded, warn
+  // before leaving. Browsers cannot auto-download or hard-block on exit, so this
+  // native confirm is the strongest available push to download a copy.
+  window.addEventListener("beforeunload", e => {
+    if (notesDirty) { e.preventDefault(); e.returnValue = ""; }
   });
 </script>
 </body>
