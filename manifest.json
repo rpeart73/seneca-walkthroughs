@@ -12,13 +12,13 @@
       "source_yaml": "../content/BFS218/week02.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week02/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
       "course": "BFS218",
       "week": 3,
-      "title": "Algorithmic Bias and the New Jim Code",
+      "title": "Engineered Inequity: Designing Discrimination",
       "term": "Fall 2026",
       "slides": 16,
       "content_pairs": 4,
@@ -27,13 +27,13 @@
       "source_yaml": "../content/BFS218/week03.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week03/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
       "course": "BFS218",
       "week": 4,
-      "title": "Default Discrimination",
+      "title": "Default Discrimination: When \"Normal\" Encodes Bias",
       "term": "Fall 2026",
       "slides": 6,
       "content_pairs": 1,
@@ -42,13 +42,13 @@
       "source_yaml": "../content/BFS218/week04.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week04/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
       "course": "BFS218",
       "week": 5,
-      "title": "Coded Exposure",
+      "title": "Coded Exposure and the Coded Gaze",
       "term": "Fall 2026",
       "slides": 6,
       "content_pairs": 1,
@@ -57,13 +57,13 @@
       "source_yaml": "../content/BFS218/week05.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week05/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
       "course": "BFS218",
       "week": 6,
-      "title": "Algorithms in Canada",
+      "title": "Algorithms in Canada: Borders, Policing, Housing",
       "term": "Fall 2026",
       "slides": 6,
       "content_pairs": 1,
@@ -72,13 +72,13 @@
       "source_yaml": "../content/BFS218/week06.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week06/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
       "course": "BFS218",
       "week": 7,
-      "title": "Assembling the Anatomy",
+      "title": "Review Week",
       "term": "Fall 2026",
       "slides": 6,
       "content_pairs": 1,
@@ -87,13 +87,13 @@
       "source_yaml": "../content/BFS218/week07.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week07/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
       "course": "BFS218",
       "week": 8,
-      "title": "Indigenous Data Sovereignty",
+      "title": "Indigenous Data Sovereignty and OCAP Principles",
       "term": "Fall 2026",
       "slides": 6,
       "content_pairs": 1,
@@ -102,13 +102,13 @@
       "source_yaml": "../content/BFS218/week08.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week08/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
       "course": "BFS218",
       "week": 9,
-      "title": "Technological Benevolence",
+      "title": "Technological Benevolence: When \"Help\" Harms",
       "term": "Fall 2026",
       "slides": 6,
       "content_pairs": 1,
@@ -117,13 +117,13 @@
       "source_yaml": "../content/BFS218/week09.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week09/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
       "course": "BFS218",
       "week": 10,
-      "title": "Algorithmic Gatekeeping",
+      "title": "Algorithmic Gatekeeping: Employment and Credit",
       "term": "Fall 2026",
       "slides": 6,
       "content_pairs": 1,
@@ -132,7 +132,7 @@
       "source_yaml": "../content/BFS218/week10.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week10/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
@@ -147,7 +147,7 @@
       "source_yaml": "../content/BFS218/week11.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week11/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     },
     {
@@ -162,7 +162,7 @@
       "source_yaml": "../content/BFS218/week12.yaml",
       "logo_embedded": true,
       "rel": "BFS218_Week12/index.html",
-      "generated": "2026-06-25T16:12:43",
+      "generated": "2026-06-25T16:29:23",
       "generator": "web_builder.py (Reveal.js 5.1.0)"
     }
   ]
